@@ -7,25 +7,26 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import twitter.com.twitterclone.business.abstracts.UserService;
-import twitter.com.twitterclone.entities.concretes.User;
+import twitter.com.twitterclone.business.abstracts.ChatService;
+import twitter.com.twitterclone.entities.concretes.Chat;
+
 
 @RestController
-@RequestMapping("/api/users")
-public class UsersController {
-
-	private UserService userService;
+@RequestMapping("/api/chat")
+public class ChatController {
+	private ChatService chatService;
+	
 
 	@Autowired
-	public UsersController(UserService userService) {
+	public ChatController(ChatService chatService) {
 		super();
-		this.userService = userService;
+		this.chatService = chatService;
 	}
 	
 	@GetMapping("/getall")
-	public List<User> getAll() {
-		return userService.getAll();
+	public List<Chat> getAll() {
+		return chatService.getAll();
 	}
-	
+
 }
  

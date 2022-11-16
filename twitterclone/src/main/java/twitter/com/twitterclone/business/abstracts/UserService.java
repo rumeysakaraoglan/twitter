@@ -5,4 +5,5 @@ import twitter.com.twitterclone.entities.concretes.User;
 
 public interface UserService {
 	List<User> getAll();
-}
+} 
+ 

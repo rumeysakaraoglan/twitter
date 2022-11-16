@@ -27,4 +27,4 @@ public class UserManager implements UserService {
 		return userRepository.getAll();
 	}
 
-}
+}  
